@@ -2,13 +2,20 @@
 
 This is a small but helpful file in translating your ([Titanium](http://docs.appcelerator.com/titanium/latest/#!/guide/Titanium_Command-Line_Interface_Reference)) apps.
 
+![screenshot](https://github.com/fokkezb/translator/raw/master/screenshot.png)
+
 # How to use
 
 1. Copy the `index.php` to a server.
-2. Secure the directory by using `.htaccess` or just giving it a random name.
+2. Secure the directory or just make the URL hard to guess :)
 3. Replace the `i18n` directory by the one of your app.
 4. Point people to the URL to translate the strings.
-5. Download the `i18n` directory back to your app or use [ti-i18n](https://nodei.co/npm/ti-i18n/) to merge the files with your local copies if you have made local changes as well.
+5. Download the `i18n` directory back to your app or use [ti-i18n](https://nodei.co/npm/ti-i18n/) to merge the files with your local copies if you have made local changes in the mean time.
+
+# Google Translator Toolkit
+
+As an alternative, you could also use [Google Translator Toolkit](http://translate.google.com/toolkit/). It provides automatic translation, translation memory and glossaries. Nice features, but I was in need of a more simple and efficient copy-paste-go solution.
+
 
 ## License
 
