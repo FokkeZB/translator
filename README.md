@@ -6,7 +6,7 @@ This is a small but helpful file in translating your ([Titanium](http://docs.app
 
 1. Copy the `index.php` to a server.
 2. Secure the directory by using `.htaccess` or just giving it a random name.
-3. Copy your app's `i18n` directory to the same folder.
+3. Replace the `i18n` directory by the one of your app.
 4. Point people to the URL to translate the strings.
 5. Download the `i18n` directory back to your app or use [ti-i18n](https://nodei.co/npm/ti-i18n/) to merge the files with your local copies if you have made local changes as well.
 
