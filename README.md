@@ -1,6 +1,6 @@
 # Translator
 
-This is a small but helpful file in translating your ([Titanium](http://docs.appcelerator.com/titanium/latest/#!/guide/Titanium_Command-Line_Interface_Reference)) apps.
+A small but helpful script for translating your ([Titanium](http://docs.appcelerator.com/titanium/latest/#!/guide/Titanium_Command-Line_Interface_Reference)) apps.
 
 ![screenshot](https://github.com/fokkezb/translator/raw/master/screenshot.png)
 
