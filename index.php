@@ -1,8 +1,5 @@
 <?
 
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
-
 $languages = array_slice(scandir('./i18n'), 2);
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {

@@ -10,7 +10,8 @@ A small but helpful script for translating your ([Titanium](http://docs.appceler
 2. Secure the directory or just make the URL hard to guess :)
 3. Replace the `i18n` directory by the one of your app.
 4. Point people to the URL to translate the strings.
-5. Download the `i18n` directory back to your app or use [ti-i18n](https://nodei.co/npm/ti-i18n/) to merge the files with your local copies if you have made local changes in the mean time.
+5. Download the `i18n` directory by appeding `?action=download`.
+6. Overwrite the `i18n` directory of your app or extract them somewhere else and use [ti-i18n](https://nodei.co/npm/ti-i18n/) to merge the files if you have made local changes in the mean time.
 
 # Google Translator Toolkit
 
