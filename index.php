@@ -1,5 +1,10 @@
 <?
 
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
+$languages = array_slice(scandir('./i18n'), 2);
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $language = $_POST['pk'];
   $name = $_POST['name'];
@@ -28,9 +33,29 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   }
 
   exit;
+
+} else if (isset($_GET['action'])) {
+  $file = tempnam(sys_get_temp_dir(), 'translator');
+
+  $zip = new ZipArchive();
+  $zip->open($file, ZipArchive::CREATE);
+
+  foreach ($languages as $language) {
+    $path = 'i18n/' . $language . '/strings.xml';
+    $zip->addFile(dirname(__FILE__) . '/' . $path, $path);
+  }
+
+  $zip->close();
+
+  header('Content-Type: application/zip');
+  header('Content-disposition: attachment; filename=translator.zip');
+  header('Content-Length: ' . filesize($file));
+  header('Pragma: no-cache');
+  header('Expires: 0');
+  readfile($file);
+  exit;
 }
 
-$languages = array_slice(scandir('./i18n'), 2);
 $strings = array();
 $names = array();
 
@@ -68,6 +93,22 @@ $names = array_unique($names);
       });
     });
     </script>
+    <style>
+    .editable-container.editable-inline,
+    .control-group.form-group,
+    .editable-input {
+      width: 100%;
+    }
+    .editable-input {
+      padding-right: 80px;
+    }
+    .editable-clear-x {
+      right: 86px;
+    }
+    .editable-buttons {
+      margin-left: -73px;
+    }
+    </style>
   </head>
   <body>
     <table class="table table-striped">
