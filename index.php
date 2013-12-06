@@ -1,6 +1,10 @@
 <?
 
-$languages = array_slice(scandir('./i18n'), 2);
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
+$files = @scandir('./i18n');
+$languages = $files ? array_slice($files, 2) : array();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $language = $_POST['pk'];
@@ -108,6 +112,7 @@ $names = array_unique($names);
     </style>
   </head>
   <body>
+    <? if (count($languages) > 0): ?>
     <table class="table table-striped">
       <thead>
         <th>name</th>
@@ -126,5 +131,8 @@ $names = array_unique($names);
         <? endforeach ?>
       </tbody>
     </table>
+    <? else: ?>
+      <div class="alert alert-warning" style="margin:1em">Nothing to translate at the moment, please come back later.</div>
+    <? endif ?>
   </body>
 </html>
