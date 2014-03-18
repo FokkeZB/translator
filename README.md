@@ -1,4 +1,4 @@
-# Translator
+# Translator [![Titanium](http://www-static.appcelerator.com/badges/titanium-git-badge-sq.png)](http://www.appcelerator.com/titanium/)
 
 A small but helpful script for translating your ([Titanium](http://docs.appcelerator.com/titanium/latest/#!/guide/Titanium_Command-Line_Interface_Reference)) apps.
 
