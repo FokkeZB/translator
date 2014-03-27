@@ -90,7 +90,7 @@ $names = array_unique($names);
       $('td span').editable({
         type: 'text',
         mode: 'inline',
-        url: './'
+        url: './<?= basename(__FILE__) ?>'
       });
     });
     </script>
