@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     exit('Found 0 or multiple strings named: ' + $name);
   }
 
-  $strings[0][0] = $value;
+  $strings[0][0] = stripslashes($value);
 
   if (!$xml->asXML($filename)) {
     http_response_code(400);
